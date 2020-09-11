@@ -1,9 +1,5 @@
 <template>
-  <v-layout>
-    <v-flex>
-      <contribution-graph />
-    </v-flex>
-  </v-layout>
+  <contribution-graph />
 </template>
 
 <script>
