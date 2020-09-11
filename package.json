@@ -2,10 +2,15 @@
   "name": "garden",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "12.x",
+    "yarn": "1.x"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "heroku-postbuild": "yarn run build",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "yarn lint:js"
