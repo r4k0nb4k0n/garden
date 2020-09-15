@@ -1,11 +1,17 @@
 <template>
-  <div>
+  <div class="d-flex justify-center">
     <v-style>
       <template v-slot:content>
         .echarts { width: 100%; height:
         {{ graphOption.yAxis.data.length * 100 + 100 + 'px;' }} }
       </template>
     </v-style>
+    <v-progress-circular
+      v-if="!isMounted"
+      :size="100"
+      color="green"
+      indeterminate
+    ></v-progress-circular>
     <v-chart
       v-if="isMounted"
       :options="graphOption"
