@@ -44,9 +44,9 @@
         {{ title }}
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-col cols="8" class="pa-0 ma-0">
+      <v-col class="pa-0 ma-0">
         <v-row>
-          <v-col cols="5" class="pa-1 ma-0">
+          <v-col class="pa-1 ma-0">
             <v-select
               v-model="rankType"
               background-color="transparent"
@@ -57,7 +57,7 @@
               @change="sortByRankType"
             ></v-select>
           </v-col>
-          <v-col cols="7" class="pa-1 ma-0">
+          <v-col class="pa-1 ma-0">
             <v-dialog
               ref="dialog"
               v-model="modal"
