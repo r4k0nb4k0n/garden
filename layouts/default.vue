@@ -44,20 +44,22 @@
         {{ title }}
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-col class="pa-0 ma-0">
+      <v-col :cols="$vuetify.breakpoint.mobile ? 6 : 8" class="pa-0 ma-0">
         <v-row>
-          <v-col class="pa-1 ma-0">
+          <v-col cols="6" class="pa-1 ma-0">
             <v-select
               v-model="rankType"
               background-color="transparent"
+              append-icon=""
               prepend-inner-icon="mdi-sort"
               :items="rankTypes"
+              hide-details
               outlined
               dense
               @change="sortByRankType"
             ></v-select>
           </v-col>
-          <v-col class="pa-1 ma-0">
+          <v-col cols="6" class="pa-1 ma-0">
             <v-dialog
               ref="dialog"
               v-model="modal"
@@ -69,11 +71,16 @@
                 <v-text-field
                   v-model="dateRangeText"
                   prepend-inner-icon="mdi-calendar"
+                  hide-details
                   readonly
                   outlined
                   dense
                   v-bind="attrs"
                   v-on="on"
+                  @click:prepend-inner="
+                    dialog = !dialog
+                    modal = !modal
+                  "
                 ></v-text-field>
               </template>
               <v-date-picker v-model="dates" range>
