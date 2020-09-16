@@ -147,7 +147,7 @@ export default {
         },
       ],
       miniVariant: false,
-      title: '잔디 정원사',
+      title: '이 시대의 정원사',
       footer: 'DSC University of Seoul',
     }
   },

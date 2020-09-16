@@ -16,15 +16,30 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    title: '이 시대의 정원사',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: '아름다운 우리 커밋 푸르게 푸르게',
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: '이 시대의 정원사',
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: '이 시대의 정원사',
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content:
+          'https://raw.githubusercontent.com/r4k0nb4k0n/garden/master/static/grass-turf.jpg',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
